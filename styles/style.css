@@ -1,0 +1,57 @@
+/* Fondo del body */
+body {
+    background: rgb(136,50,145);
+    background: radial-gradient(circle, rgba(136,50,145,0.5998774509803921) 0%, rgba(37,2,57,0.9360119047619048) 100%);
+    margin-top: 90px;
+    margin-bottom: 70px;
+    padding: 0;
+    color: white; /* Texto por defecto blanco */
+}
+
+#navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar el navbar */
+    background-color: white;
+}
+
+/* Contenedor del carrusel */
+#carouselExampleCaptions, .card, .list-group {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto; /* Espacio superior para separar del contenido */
+    border: solid 2px rgba(255, 255, 255, 0.3); /* Borde sutil */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra del contenedor */
+}
+
+/* Fondo con desenfoque detrás del carrusel */
+#carouselExampleCaptions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo.webp'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
+/* Estilo de imágenes del carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* Altura uniforme */
+    border-radius: 15px;
+}
+
+
+
+
+
